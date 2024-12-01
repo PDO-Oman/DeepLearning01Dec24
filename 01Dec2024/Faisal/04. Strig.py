@@ -1,7 +1,7 @@
 # Using f-strings (Python 3.6+)
-name = "Alice"
-age = 30
-city = "New York"
+name = "Faisal"
+age = 36
+city = "Muscat"
 
 # f-string formatting (simplest and modern way)
 print(f"Hello, my name is {name}, I am {age} years old, and I live in {city}.")
