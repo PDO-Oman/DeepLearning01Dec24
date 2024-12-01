@@ -1,0 +1,6 @@
+_tkinter.TclError: Can't find a usable init.tcl in the following directories:
+    {C:/Program Files/Python313/lib/tcl8.6} C:/Users/admin/Documents/DeepLearning/01Dec2024/Mana/.env/lib/tcl8.6 C:/Users/admin/Documents/DeepLearning/01Dec2024/Mana/lib/tcl8.6 C:/Users/admin/Documents/DeepLearning/01Dec2024/Mana/.env/library C:/Users/admin/Documents/DeepLearning/01Dec2024/Mana/library C:/Users/admin/Documents/DeepLearning/01Dec2024/Mana/tcl8.6.14/library C:/Users/admin/Documents/DeepLearning/01Dec2024/tcl8.6.14/library
+
+
+
+This probably means that Tcl wasn't installed properly.
