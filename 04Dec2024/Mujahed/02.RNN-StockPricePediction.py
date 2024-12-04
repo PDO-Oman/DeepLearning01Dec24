@@ -47,3 +47,13 @@ model.add(Dense(units=1))  # Output layer (predicted price)
 
 # Compile the model
 model.compile(optimizer='adam', loss='mean_squared_error')
+
+# Step 6: Train the model
+model.fit(X_train, y_train, epochs=10, batch_size=64)
+
+# Step 7: Predict the stock prices on the test set
+predictions = model.predict(X_test)
+
+# Step 8: Inverse transform the predictions and actual prices back to the original scale
+predictions = scaler.inverse_transform(predictions)
+y_test = scaler.inverse_transform([y_test])
