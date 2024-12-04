@@ -57,3 +57,14 @@ predictions = model.predict(X_test)
 # Step 8: Inverse transform the predictions and actual prices back to the original scale
 predictions = scaler.inverse_transform(predictions)
 y_test = scaler.inverse_transform([y_test])
+
+
+# Step 9: Visualize the results
+plt.figure(figsize=(12, 6))
+plt.plot(data.index[-len(y_test[0]):], y_test[0], color='blue', label='Actual Prices')
+plt.plot(data.index[-len(predictions):], predictions[:, 0], color='red', label='Predicted Prices')
+plt.title('Stock Price Prediction')
+plt.xlabel('Date')
+plt.ylabel('Stock Price (USD)')
+plt.legend()
+plt.show()
