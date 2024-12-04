@@ -32,3 +32,8 @@ X, y = create_dataset(scaled_data)
 # Reshape X to be compatible with LSTM input [samples, time steps, features]
 X = X.reshape(X.shape[0], X.shape[1], 1)
 
+
+# Split data into training and test sets (80% training, 20% testing)
+train_size = int(len(X) * 0.8)
+X_train, X_test = X[:train_size], X[train_size:]
+y_train, y_test = y[:train_size], y[train_size:]
