@@ -37,3 +37,9 @@ X = X.reshape(X.shape[0], X.shape[1], 1)
 train_size = int(len(X) * 0.8)
 X_train, X_test = X[:train_size], X[train_size:]
 y_train, y_test = y[:train_size], y[train_size:]
+
+
+# Step 5: Build the LSTM model
+model = Sequential()
+model.add(LSTM(units=50, return_sequences=False, input_shape=(X_train.shape[1], 1)))
+model.add(Dense(units=1))  # Output layer (predicted price)
