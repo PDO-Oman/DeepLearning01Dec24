@@ -43,3 +43,7 @@ y_train, y_test = y[:train_size], y[train_size:]
 model = Sequential()
 model.add(LSTM(units=50, return_sequences=False, input_shape=(X_train.shape[1], 1)))
 model.add(Dense(units=1))  # Output layer (predicted price)
+
+
+# Compile the model
+model.compile(optimizer='adam', loss='mean_squared_error')
